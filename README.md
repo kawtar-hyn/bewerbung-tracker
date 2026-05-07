@@ -255,7 +255,7 @@ Registriere dich mit einem neuen Konto und starte deine Bewerbungsverwaltung! �
 
 ## 👨‍💻 Entwickelt von
 
-**[Dein Name]** — Bewerber für Fachinformatiker Anwendungsentwicklung / Systemintegration
+**[Kawtar_HAYANI_MOUHSSINE]** — Bewerber für Fachinformatiker Anwendungsentwicklung / Systemintegration
 
 ---
 
