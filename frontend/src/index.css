@@ -1,0 +1,84 @@
+/* Tailwind CSS Direktiven */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Globale Stile ─────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Dark Mode Basis */
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+}
+
+/* ── Wiederverwendbare Komponenten-Klassen ──────────────────── */
+@layer components {
+  /* Karte / Card */
+  .karte {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6;
+  }
+
+  .dark .karte {
+    @apply bg-slate-800 border-slate-700;
+  }
+
+  /* Primär-Button */
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-4 py-2.5 rounded-xl font-medium
+           hover:bg-indigo-700 active:bg-indigo-800
+           transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed
+           flex items-center gap-2;
+  }
+
+  /* Sekundär-Button */
+  .btn-sekundaer {
+    @apply bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl font-medium
+           hover:bg-slate-200 transition-all duration-200
+           flex items-center gap-2;
+  }
+
+  .dark .btn-sekundaer {
+    @apply bg-slate-700 text-slate-200 hover:bg-slate-600;
+  }
+
+  /* Formular-Input */
+  .eingabe {
+    @apply w-full px-4 py-2.5 rounded-xl border border-slate-200
+           bg-white text-slate-800 placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+           transition-all duration-200;
+  }
+
+  .dark .eingabe {
+    @apply bg-slate-700 border-slate-600 text-slate-100 placeholder-slate-400;
+  }
+
+  /* Status-Badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+@keyframes einblenden {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animiert {
+  animation: einblenden 0.3s ease-out;
+}
+
+/* Scrollbar verschönern */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-slate-100; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }

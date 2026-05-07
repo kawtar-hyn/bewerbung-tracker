@@ -1,0 +1,20 @@
+# Abhängigkeiten (werden mit npm install neu installiert)
+node_modules/
+
+# Umgebungsvariablen (NIEMALS ins Git!)
+.env
+backend/.env
+
+# Build-Ordner
+frontend/build/
+
+# Hochgeladene Dateien (optional — je nach Projekt)
+backend/uploads/*.pdf
+
+# OS-Dateien
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
